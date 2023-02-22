@@ -1,0 +1,10 @@
+@use '../common' as *;
+
+.heading {
+  font-family: $font-family-barlow;
+  color: $color-neutral_900;
+
+  &--1 {
+    // font-weight: $;
+  }
+}
