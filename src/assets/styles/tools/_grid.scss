@@ -1,7 +1,7 @@
-@use 'sass:math' as math;
-@use '../tools/media' as *;
-@use '../tools/rtl' as *;
-@use '../settings/grid' as *;
+@use "sass:math" as math;
+@use "../tools/media" as *;
+@use "../tools/rtl" as *;
+@use "../settings/grid" as *;
 
 @mixin setGridCol($col) {
   @if ($col > 0) {
@@ -53,14 +53,6 @@
       }
     }
   }
-
-  @include isMediaFullHd() {
-    @for $i from 0 through $grid-columns {
-      &__item--#{$i}-xl {
-        @include setGridCol($col: $i);
-      }
-    }
-  }
 }
 
 @mixin generateGridOffsets {
@@ -83,14 +75,6 @@
   @include isMediaDesktop() {
     @for $i from 0 through $grid-columns {
       &__offset--#{$i}-lg {
-        @include setGridOffset($col: $i);
-      }
-    }
-  }
-
-  @include isMediaFullHd() {
-    @for $i from 0 through $grid-columns {
-      &__offset--#{$i}-xl {
         @include setGridOffset($col: $i);
       }
     }

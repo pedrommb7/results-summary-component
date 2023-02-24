@@ -1,2 +1,14 @@
-@forward "./assets/styles/common";
-@forward "./assets/styles/main.scss";
+@use "assets/styles/common" as *;
+@use "assets/styles/main.scss" as *;
+
+.app {
+  .score {
+    background-color: $color-gradient-lightroyalblue;
+    border-radius: $border-radius-00 $border-radius-00 $border-radius-30
+      $border-radius-30;
+
+    > p {
+      color: $color-gradient-lightslateblue;
+    }
+  }
+}

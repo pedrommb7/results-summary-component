@@ -1,13 +1,13 @@
-@use '../common' as *;
+@use "../common" as *;
 
 html {
   font-size: 100%;
 }
 
 body {
-  font-family: $font-family-barlow;
-  font-weight: $font-weight-regular;
-  color: $color-neutral_600;
+  font-family: $font-family-hankengrotesk;
+  font-weight: $font-weight-medium;
+  color: $color-neutral_darkgreyblue;
   line-height: 1.33333;
   margin: 0;
 }

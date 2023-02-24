@@ -1,4 +1,4 @@
-@use '../settings/breakpoints' as *;
+@use "../settings/breakpoints" as *;
 
 @mixin isMediaTablet($direction: min-width) {
   @media all and ($direction: $breakpoint-tablet) {
@@ -17,9 +17,3 @@
     @content;
   }
 }
-
-// @mixin isMediaFullHd($direction: min-width) {
-//   @media all and ($direction: $breakpoint-fullhd) {
-//     @content;
-//   }
-// }

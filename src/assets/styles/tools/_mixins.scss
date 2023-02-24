@@ -1,16 +1,16 @@
-@use '../tools/media' as *;
+@use "../tools/media" as *;
 
-@mixin setPropMedia($prop, $values, $media: '') {
-  @if ($media != '') {
-    $media: '-' + #{$media};
+@mixin setPropMedia($prop, $values, $media: "") {
+  @if ($media != "") {
+    $media: "-" + #{$media};
   }
 
   @each $value in $values {
     $valueClass: nth($value, 1);
     $valueProp: nth($value, 2);
 
-    @if ($valueClass != '') {
-      $valueClass: '--' + #{$valueClass};
+    @if ($valueClass != "") {
+      $valueClass: "--" + #{$valueClass};
     }
 
     &#{$valueClass}#{$media} {
@@ -23,14 +23,10 @@
   @include setPropMedia($prop, $values);
 
   @include isMediaTablet() {
-    @include setPropMedia($prop, $values, 'md');
+    @include setPropMedia($prop, $values, "md");
   }
 
   @include isMediaDesktop() {
-    @include setPropMedia($prop, $values, 'lg');
-  }
-
-  @include isMediaFullHd() {
-    @include setPropMedia($prop, $values, 'xl');
+    @include setPropMedia($prop, $values, "lg");
   }
 }

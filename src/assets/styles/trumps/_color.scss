@@ -1,0 +1,21 @@
+@use "../settings/colors" as *;
+.color {
+  &-primary {
+    &--red {
+      color: $color-primary-red;
+    }
+
+    &--white {
+      color: $color-primary-white;
+    }
+  }
+
+  &-gradient {
+  }
+
+  &-neutral {
+    &--darkgreyblue {
+      color: $color-neutral-darkgreyblue;
+    }
+  }
+}

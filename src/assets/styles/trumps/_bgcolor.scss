@@ -1,0 +1,7 @@
+@use "../settings/colors" as *;
+
+.bgcolor {
+  &-red {
+    background-color: $color-primary-red;
+  }
+}

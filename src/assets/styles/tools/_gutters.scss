@@ -1,29 +1,28 @@
-@use '../settings/spacings' as *;
-@use '../tools/rtl' as *;
+@use "../settings/spacings" as *;
+@use "../tools/rtl" as *;
 
-$gutterKeys: (('m', 'margin'), ('p', 'padding'));
+$gutterKeys: (("m", "margin"), ("p", "padding"));
 $gutters: (
-  ('0', 0),
-  ('0', $spacing-00),
-  ('1', $spacing-01),
-  ('2', $spacing-02),
-  ('3', $spacing-03),
-  ('4', $spacing-04),
-  ('5', $spacing-05),
-  ('6', $spacing-06),
-  ('7', $spacing-07),
-  ('8', $spacing-08),
-  ('9', $spacing-09),
-  ('10', $spacing-10),
-  ('11', $spacing-11),
-  ('12', $spacing-12)
+  ("0", $spacing-00),
+  ("4", $spacing-04),
+  ("8", $spacing-08),
+  ("12", $spacing-12),
+  ("16", $spacing-16),
+  ("20", $spacing-20),
+  ("24", $spacing-24),
+  ("28", $spacing-28),
+  ("32", $spacing-32),
+  ("40", $spacing-40),
+  ("48", $spacing-48),
+  ("56", $spacing-56),
+  ("64", $spacing-64)
 );
-$positions: (('t', 'top'), ('b', 'bottom'));
-$rtlPositions: (('r', 'right'), ('l', 'left'));
+$positions: (("t", "top"), ("b", "bottom"));
+$rtlPositions: (("r", "right"), ("l", "left"));
 
-@mixin setGutters($viewportSuffix: '') {
-  @if $viewportSuffix != '' {
-    $viewportSuffix: '-' + #{$viewportSuffix};
+@mixin setGutters($viewportSuffix: "") {
+  @if $viewportSuffix != "" {
+    $viewportSuffix: "-" + #{$viewportSuffix};
   }
 
   @each $size in $gutters {
@@ -67,11 +66,11 @@ $rtlPositions: (('r', 'right'), ('l', 'left'));
           }
 
           @include isRtl() {
-            @if ($posValue == 'left') {
+            @if ($posValue == "left") {
               #{$gutterKeyValue}-right: $sizeValue !important;
             }
 
-            @if ($posValue == 'right') {
+            @if ($posValue == "right") {
               #{$gutterKeyValue}-left: $sizeValue !important;
             }
           }
