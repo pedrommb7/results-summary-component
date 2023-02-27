@@ -1,8 +1,8 @@
-import Paragraph from "./components/atoms/Paragraph/paragraph";
+import Paragraph from "./components/atoms/Paragraph/Paragraph";
 import Heading from "./components/atoms/Heading/Heading";
 import Button from "./components/atoms/Button/Button";
+import ScoreBadge from "./components/molecules/ScoreBadge/ScoreBadge";
 import AreasScored from "./components/molecules/AreasScored/AreasScored";
-import "./assets/styles/main.scss";
 import "./App.scss";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <div className="app">
       <section className="score flex flex__align--center flex--column py--16 px--64">
         <Paragraph text={"Your Result"} />
-        76 of 100 
+        <ScoreBadge className="my--12" />
         <Heading className="color-primary--white" type="h1" text={'Great'} />
         <Paragraph className="mt-0"
           text={
