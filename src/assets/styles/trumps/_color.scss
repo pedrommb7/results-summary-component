@@ -1,8 +1,21 @@
 @use "../settings/colors" as *;
+
 .color {
   &-primary {
     &--red {
       color: $color-primary-red;
+    }
+
+    &--orange {
+      color: $color-primary-orange;
+    }
+
+    &--blue {
+      color: $color-primary-blue;
+    }
+
+    &--green {
+      color: $color-primary-green;
     }
 
     &--white {
@@ -11,6 +24,13 @@
   }
 
   &-gradient {
+    &--lightslateblue {
+      color: $color-gradient-lightslateblue;
+    }
+
+    &--lightslateblue2 {
+      color: $color-gradient-lightslateblue2;
+    }
   }
 
   &-neutral {
