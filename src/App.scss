@@ -11,7 +11,6 @@
       $border-radius-30;
 
     &__yourresult {
-      color: $color-primary-white;
       font-size: $font-size-18;
     }
 
@@ -19,6 +18,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      @include isMediaDesktop() {
+        width: 170px;
+        height: 170px;
+      }
       width: 130px;
       height: 130px;
       border-radius: 50%;
@@ -28,7 +32,7 @@
       );
 
       &__obtained {
-        font-size: $font-size-48;
+        font-size: $font-size-60;
         font-weight: $font-weight-bold;
         color: $color-primary-white;
       }
@@ -37,9 +41,37 @@
         color: $color-gradient-lightslateblue;
       }
     }
+
+    @include isMediaDesktop() {
+      flex-basis: 50%;
+      border-radius: $border-radius-30;
+
+      h1 {
+        margin-top: 40px !important;
+        margin-bottom: 12px !important;
+      }
+
+      &__text {
+        padding: 0 5px;
+        text-align: center;
+      }
+    }
   }
 
   .summary {
+    @include isMediaDesktop() {
+      flex-basis: 50%;
+      box-shadow: 0px 25px 60px hsl(241, 81%, 54%, 0.2);
+      border-radius: $border-radius-00 $border-radius-30 $border-radius-30
+        $border-radius-00;
+      margin-left: -30px !important;
+      padding-left: 64px !important;
+
+      h3 {
+        font-size: $font-size-20;
+      }
+    }
+
     &__score {
       :nth-child(1) {
         font-weight: $font-weight-extrabold;
@@ -58,5 +90,21 @@
 
   footer {
     text-align: center;
+  }
+
+  @include isMediaDesktop() {
+    display: flex;
+    flex-wrap: wrap;
+
+    //center everything horizontally and vertically
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    footer {
+      flex-basis: 100%;
+      margin-top: 12px;
+    }
   }
 }
