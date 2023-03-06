@@ -4,6 +4,7 @@ import Button from "./components/atoms/Button/Button.tsx";
 import ScoreBadge from "./components/molecules/ScoreBadge/ScoreBadge.tsx";
 import AreasScored from "./components/molecules/AreasScored/AreasScored.tsx";
 import Footer from "./components/organisms/Footer/Footer.tsx";
+import data from "./data.json";
 import "./App.scss";
 
 function App() {
@@ -22,10 +23,9 @@ function App() {
 
       <section className="summary flex flex--column p--32">
         <Heading className='m--0 mb--20' type="h3" text={'Summary'} />
-        <AreasScored className='bgcolor-lightred' text='Reaction' score='80'/>
-        <AreasScored className='bgcolor-lightyellow' text='Memory' score='92'/>
-        <AreasScored className='bgcolor-lightgreen' text='Verbal' score='61'/>
-        <AreasScored className='bgcolor-lightblue' text='Visual' score='72'/>
+        {data.map((item) => (
+          <AreasScored key={item.id} text={item.category} score={item.score}/>
+        ))}
         <Button className="flex__justify--center bgcolor-darkblue color-primary--white border-radius--30 py--16 mt--8" text={'Continue'}></Button>
       </section>
       

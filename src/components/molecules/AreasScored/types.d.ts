@@ -5,3 +5,10 @@ export interface AreasScoredProps {
     //status?: 'reaction' | 'memory' | 'verbal' | 'visual';
     className?: string;
 }
+
+export interface DataProps {
+    id: number;
+    category?: string;
+    score?: number;
+    icon?: JSX.Element;
+}
