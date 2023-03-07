@@ -10,7 +10,7 @@ This is a solution to the [Results summary component challenge on Frontend Mento
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
+  - [Highlights](#highlights)
   - [Continued development](#continued-development)
 - [Author](#author)
 
@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/pedrommb7/results-summary-component](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://resultssummary.netlify.app](https://resultssummary.netlify.app/)
 
 ## My process
 

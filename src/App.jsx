@@ -9,8 +9,8 @@ import "./App.scss";
 
 function App() {
   return (
-    <div className="app">
-      <section className="score flex flex__align--center flex--column py--16 px--64">
+    <div className="app" aria-label="Whole component">
+      <section className="score flex flex__align--center flex--column py--16 px--64" aria-label="Score">
         <Paragraph className="score__yourresult color-gradient--lightslateblue2" text={"Your Result"} />
         <ScoreBadge className='my--4' />
         <Heading className="mt--16 mb--8 color-primary--white" type="h1" text={'Great'} />
@@ -21,8 +21,8 @@ function App() {
         />
       </section>
 
-      <section className="summary flex flex--column p--32">
-        <Heading className='m--0 mb--20' type="h3" text={'Summary'} />
+      <section className="summary flex flex--column p--32" aria-label="Summary">
+        <Heading className='m--0 mb--20' type="h2" text={'Summary'} />
         {data.map((item) => (
           <AreasScored key={item.id} status={item.category} score={item.score}/>
         ))}
