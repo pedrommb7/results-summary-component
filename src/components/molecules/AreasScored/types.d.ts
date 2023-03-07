@@ -1,8 +1,7 @@
 export interface AreasScoredProps {
-    svg: JSX.Element;
-    text: string;
+    svg?: JSX.Element;
     score: number;
-    //status?: 'reaction' | 'memory' | 'verbal' | 'visual';
+    status: 'Reaction' | 'Memory' | 'Verbal' | 'Visual';
     className?: string;
 }
 

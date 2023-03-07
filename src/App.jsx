@@ -24,7 +24,7 @@ function App() {
       <section className="summary flex flex--column p--32">
         <Heading className='m--0 mb--20' type="h3" text={'Summary'} />
         {data.map((item) => (
-          <AreasScored key={item.id} text={item.category} score={item.score}/>
+          <AreasScored key={item.id} status={item.category} score={item.score}/>
         ))}
         <Button className="flex__justify--center bgcolor-darkblue color-primary--white border-radius--30 py--16 mt--8" text={'Continue'}></Button>
       </section>

@@ -61,7 +61,7 @@
   .summary {
     @include isMediaDesktop() {
       flex-basis: 50%;
-      box-shadow: 0px 25px 60px hsl(241, 81%, 54%, 0.2);
+      box-shadow: $elevation-01;
       border-radius: $border-radius-00 $border-radius-30 $border-radius-30
         $border-radius-00;
       margin-left: -30px !important;
@@ -79,12 +79,18 @@
 
       :nth-child(2),
       :nth-child(3) {
-        color: rgb(168, 168, 168);
+        color: $color-neutral-grey;
       }
     }
 
     button {
       font-size: $font-size-18;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $color-gradient-lightroyalblue;
+      }
     }
   }
 

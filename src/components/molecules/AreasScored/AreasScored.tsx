@@ -2,8 +2,13 @@ import React, { FC } from "react";
 import { AreasScoredProps } from "./types";
 import "../../../assets/styles/main.scss";
 
-const AreasScored: FC<AreasScoredProps> = ({ svg, text, score, className }) => {
-  switch (text) {
+const AreasScored: FC<AreasScoredProps> = ({
+  svg,
+  status,
+  score,
+  className,
+}) => {
+  switch (status) {
     case "Reaction":
       svg = (
         <svg
@@ -121,36 +126,34 @@ const AreasScored: FC<AreasScoredProps> = ({ svg, text, score, className }) => {
       );
   }
   return (
-    <>
-      <div
-        className={`${
-          text === "Reaction" ? (className = "bgcolor-lightred") : ""
-        } ${text === "Memory" ? (className = "bgcolor-lightyellow") : ""} ${
-          text === "Verbal" ? (className = "bgcolor-lightgreen") : ""
-        } ${
-          text === "Visual" ? (className = "bgcolor-lightblue") : ""
-        } border-radius--8 flex flex--row flex__justify--space-between flex__align--center py--16 mb--16`}
-      >
-        <div className="summary__area flex flex__align--center px--16">
-          {svg}
-          <span
-            className={`mx--12 ${
-              text === "Reaction" ? "color-primary--red" : ""
-            } ${text === "Memory" ? "color-primary--orange" : ""} ${
-              text === "Verbal" ? "color-primary--green" : ""
-            } ${text === "Visual" ? "color-primary--blue" : ""}`}
-          >
-            {text}
-          </span>
-        </div>
-
-        <div className="summary__score px--16">
-          <span>{score}</span>
-          <span className="mx--4">/</span>
-          <span>100</span>
-        </div>
+    <div
+      className={`${
+        status === "Reaction" ? (className = "bgcolor-lightred") : ""
+      } ${status === "Memory" ? (className = "bgcolor-lightyellow") : ""} ${
+        status === "Verbal" ? (className = "bgcolor-lightgreen") : ""
+      } ${
+        status === "Visual" ? (className = "bgcolor-lightblue") : ""
+      } border-radius--8 flex flex--row flex__justify--space-between flex__align--center py--16 mb--16`}
+    >
+      <div className="summary__area flex flex__align--center px--16">
+        {svg}
+        <span
+          className={`mx--12 ${
+            status === "Reaction" ? "color-primary--red" : ""
+          } ${status === "Memory" ? "color-primary--orange" : ""} ${
+            status === "Verbal" ? "color-primary--green" : ""
+          } ${status === "Visual" ? "color-primary--blue" : ""}`}
+        >
+          {status}
+        </span>
       </div>
-    </>
+
+      <div className="summary__score px--16">
+        <span>{score}</span>
+        <span className="mx--4">/</span>
+        <span>100</span>
+      </div>
+    </div>
   );
 };
 
