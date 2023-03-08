@@ -40,6 +40,7 @@ Users should be able to:
 
 - HTML
 - SCSS, BEM
+- Atomic design
 - Flexbox
 - Mobile-first workflow
 - [React-TypeScript](https://create-react-app.dev/docs/adding-typescript/)
